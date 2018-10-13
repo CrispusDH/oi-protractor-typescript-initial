@@ -1,0 +1,39 @@
+{
+  "name": "oi-protractor-typescript-initial",
+  "version": "0.1.0",
+  "description": "TBD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrispusDH/oi-protractor-typescript-initial.git"
+  },
+  "author": "Oleksii Ihnatiuk <qacrispus@gmail.com> (https://github.com/CrispusDH)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/declarations/index.d.ts",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "devDependencies": {
+    "protractor": "5.4.1",
+    "protractor-element-extend": "2.1.0",
+    "tslint": "5.11.0",
+    "tslint-eslint-rules": "5.4.0",
+    "typescript": "3.1.1",
+    "oi-verify": "1.0.0"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run lint && tsc",
+    "postpublish": "npm run clean",
+    "clean": "rm -rf dist",
+    "lint": "tslint 'src/**/*.ts'"
+  },
+  "bugs": {
+    "url": "https://github.com/CrispusDH/oi-protractor-typescript-initial/issues"
+  },
+  "homepage": "https://github.com/CrispusDH/oi-protractor-typescript-initial#readme",
+  "keywords": [
+    "protractor",
+    "protractor-element-extender",
+    "typescript"
+  ]
+}
