@@ -44,7 +44,7 @@ export class Fragment extends BaseFragment {
     try {
       await this.waitForClickable();
     } catch (e) {
-      throw new Error(`Can not clear the input of not visible fragment. ${e}`);
+      throw new Error(`Can not clear the input of not clickable fragment. ${e}`);
     }
     await this.clear();
   }
