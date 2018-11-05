@@ -28,9 +28,9 @@ export class Fragment extends BaseFragment {
 
   public async pressEscape(): Promise<void> {
     try {
-      await this.waitForVisible();
+      await this.waitForClickable();
     } catch (e) {
-      throw new Error(`Can not press escape of not visible fragment. ${e}`);
+      throw new Error(`Can not press escape of not clickable fragment. ${e}`);
     }
     await this.sendKeys(protractor.Key.ESCAPE);
   }
@@ -42,9 +42,9 @@ export class Fragment extends BaseFragment {
 
   public async clearInput(): Promise<void> {
     try {
-      await this.waitForVisible();
+      await this.waitForClickable();
     } catch (e) {
-      throw new Error(`Can not clear the input of not visible fragment. ${e}`);
+      throw new Error(`Can not clear the input of not clickable fragment. ${e}`);
     }
     await this.clear();
   }
