@@ -18,7 +18,7 @@
     "protractor-element-extend": "2.1.0",
     "tslint": "5.11.0",
     "tslint-eslint-rules": "5.4.0",
-    "typescript": "3.1.1",
+    "typescript": "3.2.2",
     "oi-verify": "1.0.0"
   },
   "scripts": {
