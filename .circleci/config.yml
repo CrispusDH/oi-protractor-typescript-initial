@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/node:10.14.1
+
+    working_directory: ~/oi-protractor-typescript-initial
+
+    steps:
+    - checkout
+
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
+
+    - run:
+        name: Setup Dependencies
+        command: |
+          npm install
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+
+    - run:
+        name: Run Linter
+        command: |
+          npm run lint
