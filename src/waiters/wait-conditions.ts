@@ -9,6 +9,7 @@ export class WaitConditions {
     await waitFor(
       EC.elementToBeClickable(element) as () => Promise<boolean>,
       `${element.locator()} was expected to be clickable`,
+      20 * 1000
     );
   }
 
@@ -16,6 +17,7 @@ export class WaitConditions {
     await waitFor(
       EC.visibilityOf(element) as () => Promise<boolean>,
       `${element.locator()} was expected to be visible`,
+      20 * 1000
     );
   }
 
@@ -23,6 +25,7 @@ export class WaitConditions {
     await waitFor(
       EC.invisibilityOf(element) as () => Promise<boolean>,
       `${element.locator()} was expected to be invisible`,
+      20 * 1000
     );
   }
 
@@ -30,6 +33,7 @@ export class WaitConditions {
     await waitFor(
       Predicates.isArrayNotEmpty(array),
       'Array of fragments expected to be not empty',
+      20 * 1000
     );
   }
 }
